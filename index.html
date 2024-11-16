@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <h1 id="heading">Welcome to JS DOM Test!!</h1>
+    <div id="all-wrapper">
+
+        <div class="wraper-1">
+            <div class="div">
+                <h2 class="text">List of Books</h2>
+                <ul class="table-1"></ul>
+            </div>
+            <div class="div">
+                <h2 class="text">List of fruits</h2>
+                <ul class="table-2"></ul>
+            </div>
+            <div class="div">
+                <h2 class="text">List of places</h2>
+                <ul class="table-3"></ul>
+            </div>
+        </div>
+
+
+       <div class="wraper-2">
+        <div class="div">
+            <h2 class="text">List of movies</h2>
+            <ul class="table-4"></ul>
+        </div>
+        <div class="div">
+            <h2 class="text">List of sports</h2>
+            <ul class="table-5"></ul>
+        </div>
+       </div>
+
+
+    </div>
+
+    <script>
+       let body = document.getElementById('main')
+       body.style.backgroundColor = '#FFDAB9'
+
+       let heading = document.getElementById('heading')
+       heading.style.backgroundColor = '#B83C08';
+       heading.style.width = '80%';
+       heading.style.height = '60px';
+       heading.style.textAlign = 'center'
+       heading.style.marginLeft = '130px'
+       heading.style.paddingTop = '20px'
+
+
+
+       let all = document.getElementById('all-wrapper')
+    //    all.style.display = 'flex'
+       all.style.justifyContent = 'center'
+       all.style.alignItems = 'center'
+
+
+       let wrapper1 = document.getElementsByClassName('wraper-1')[0]
+       wrapper1.style.display = 'flex'
+       wrapper1.style.flexDirection = 'row'
+       wrapper1.style.marginLeft = '130px'
+
+       let wrapper2 = document.getElementsByClassName('wraper-2')[0]
+       wrapper2.style.display = 'flex'
+       wrapper2.style.flexDirection = 'row'
+       wrapper2.style.marginLeft = '130px'
+       wrapper2.style.marginTop = '20px'
+
+
+       /// this is tabil 1 ///
+       let divs = document.getElementsByClassName('div')[0]
+       divs.style.border = '2px solid black';
+       divs.style.backgroundColor = 'white';
+       divs.style.width = '350px';
+       divs.style.height = '200px';
+       divs.style.borderRadius = '10px';
+       divs.style.margin = '10px';
+       divs.style.padding = '15px';
+
+
+       let textColor = document.getElementsByClassName('text')[0]
+       textColor.style.color = '#00FA9A';
+
+       let list1 = document.getElementsByClassName('table-1')[0]
+       
+
+       let createList = document.createElement('li');
+       createList.innerText = "Book name 1"
+       createList.style.color = 'green'
+       list1.appendChild(createList);
+       
+
+       let createList2 = document.createElement('li');
+       createList2.innerText = "Book name 2";
+       list1.appendChild(createList2);
+
+       let createList3= document.createElement('li');
+       createList3.innerText = "Book name 3"
+       createList3.style.color = 'blue'
+       list1.appendChild(createList3);
+       
+       let createList4 = document.createElement('li');
+       createList4.innerText = "Book name 4";
+       list1.appendChild(createList4);
+
+       let createList5 = document.createElement('li');
+       createList5.innerText = "Book name 5";
+       list1.appendChild(createList5);
+
+
+        /// this is tabil 2 ///
+       let divs2 = document.getElementsByClassName('div')[1]
+       divs2.style.border = '2px solid black';
+       divs2.style.backgroundColor = 'white';
+       divs2.style.width = '350px';
+       divs2.style.height = '200px';
+       divs2.style.borderRadius = '10px';
+       divs2.style.margin = '10px';
+       divs2.style.padding = '15px';
+
+
+       
+       let textColor2 = document.getElementsByClassName('text')[1]
+       textColor2.style.color = '#00FF00';
+
+       let list2 = document.getElementsByClassName('table-2')[0]
+       
+
+       let createList6 = document.createElement('li');
+       createList6.innerText = "Fruit name 1"
+       list2.appendChild(createList6);
+       
+
+       let createList7 = document.createElement('li');
+       createList7.innerText = "Fruit  name 2";
+       list2.appendChild(createList7);
+
+       let createList8= document.createElement('li');
+       createList8.innerText = "Fruit  name 3"
+       list2.appendChild(createList8);
+       
+       let createList9 = document.createElement('li');
+       createList9.innerText = "Fruit  name 4";
+       createList9.style.color = 'blue'
+       list2.appendChild(createList9);
+
+       let createList10 = document.createElement('li');
+       createList10.innerText = "Fruit  name 5";
+       list2.appendChild(createList10);
+
+       let createList11 = document.createElement('li');
+       createList11.innerText = "Fruit name 6";
+       list2.appendChild(createList11);
+
+       let createList12 = document.createElement('li');
+       createList12.innerText = "Fruit name 7";
+       createList12.style.color = 'red'
+       list2.appendChild(createList12);
+
+       /// this is tabil 3 ///
+       
+       let divs3 = document.getElementsByClassName('div')[2]
+       divs3.style.border = '2px solid black';
+       divs3.style.backgroundColor = 'white';
+       divs3.style.width = '350px';
+       divs3.style.height = '200px';
+       divs3.style.borderRadius = '10px';
+       divs3.style.margin = '10px';
+       divs3.style.padding = '15px';
+
+
+       
+       let textColor3 = document.getElementsByClassName('text')[2]
+       textColor3.style.color = '#0059FF';
+
+       let list3 = document.getElementsByClassName('table-3')[0]
+       
+
+       let createList13 = document.createElement('li');
+       createList13.innerText = "Place name 1"
+       list3.appendChild(createList13);
+       
+
+       let createList14 = document.createElement('li');
+       createList14.innerText = "Place name 2";
+       createList14.style.color = '#0059FF';
+       list3.appendChild(createList14);
+
+       let createList15= document.createElement('li');
+       createList15.innerText = "Place name 3"
+       list3.appendChild(createList15);
+       
+       let createList16 = document.createElement('li');
+       createList16.innerText = "Place name 4";
+       list3.appendChild(createList16);
+
+       
+
+       
+       /// this is tabil 4 ///
+       
+       let divs4 = document.getElementsByClassName('div')[3]
+       divs4.style.border = '2px solid black';
+       divs4.style.backgroundColor = 'white';
+       divs4.style.width = '350px';
+       divs4.style.height = '160px';
+       divs4.style.borderRadius = '10px';
+       divs4.style.margin = '10px';
+       divs4.style.padding = '15px';
+
+
+       
+       let textColor4 = document.getElementsByClassName('text')[3]
+       textColor4.style.color = '#F433FF';
+
+       let list4 = document.getElementsByClassName('table-4')[0]
+       
+
+       let createList17 = document.createElement('li');
+       createList17.innerText = "Movie name 1"
+       list4.appendChild(createList17);
+       
+
+       let createList18 = document.createElement('li');
+       createList18.innerText = "Movie name 2";
+       list4.appendChild(createList18);
+
+       let createList19= document.createElement('li');
+       createList19.innerText = "Movie name 3";
+       createList19.style.color = '#FFDF00';
+       list4.appendChild(createList19);
+       
+       let createList20 = document.createElement('li');
+       createList20.innerText = "Movie name 4";
+       list4.appendChild(createList20);
+
+          /// this is tabil 5 ///
+       
+       let divs5 = document.getElementsByClassName('div')[4]
+       divs5.style.border = '2px solid black';
+       divs5.style.backgroundColor = 'white';
+       divs5.style.width = '350px';
+       divs5.style.height = '160px';
+       divs5.style.borderRadius = '10px';
+       divs5.style.margin = '10px';
+       divs5.style.padding = '15px';
+
+       
+       
+       let textColor5 = document.getElementsByClassName('text')[4]
+       textColor5.style.color = 'red';
+
+       let list5 = document.getElementsByClassName('table-5')[0]
+       
+
+       let createList21 = document.createElement('li');
+       createList21.innerText = "Sport name 1";
+       createList21.style.color = '#0059FF';
+       list5.appendChild(createList21);
+       
+
+       let createList22 = document.createElement('li');
+       createList22.innerText = "Sport name 2";
+       list5.appendChild(createList22);
+
+       let createList23= document.createElement('li');
+       createList23.innerText = "Sport name 3";
+       createList23.style.color = '#0059FF';
+       list5.appendChild(createList23);
+       
+       let createList24 = document.createElement('li');
+       createList24.innerText = "Sport name 4";
+       list5.appendChild(createList24);
+
+
+    </script>
+</body>
+</html>
